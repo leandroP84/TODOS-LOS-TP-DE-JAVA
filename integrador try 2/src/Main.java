@@ -73,7 +73,7 @@ public class Main {
         procesarItems(bonoSueldo1 , empleado1 ,false);
 
 
-        mostrarBonosGenerados(empleado1);
+        mostrarBonosGenerados(empleado1, bonoSueldo1);
 
 
     }
@@ -196,9 +196,8 @@ public class Main {
         return ingreso;
     }
 
-    private static void mostrarBonosGenerados(Empleado empleado)
+    private static void mostrarBonosGenerados(Empleado empleado, BonoSueldo bono)
     {
-        for (BonoSueldo bono : empleado.getBonos()) {
             System.out.println("\nBono de sueldo a Liquidar:");
             System.out.println("Nombre: " + empleado.getNombreEmpleado());
             System.out.println("CUIL: " + empleado.getCuil());
@@ -227,6 +226,6 @@ public class Main {
             System.out.println("\nSUB TOTAL\t\t" + totalHaberes + "\t\t" + totalDeducciones);
             System.out.println("NETO\t\t\t" + bono.getMontoLiquidacion());
             System.out.println("----------------------------------------");
-        }
+
     }
 }
