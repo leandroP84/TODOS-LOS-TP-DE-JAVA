@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 
 public class Main {
-    public static void main(String[] args)
+    public static void main1(String[] args)
     {
         System.out.println("---Pokemon");
         Pikachu pika = new Pikachu();
@@ -17,6 +17,10 @@ public class Main {
         pika.atacarAraniazo();
         pika.atacarImpactrueno();
         bulbasaur.atacarAraniazo();
+
+        //Operador Ternario // if en una fila
+        //variable  = condición ? valor_si_verdadero : valor_si_falso;
+        //mayorEdad = edad >=18 ?     "Es mayor"     :   "Es menor"  ;
 
         //ArrayList de Perros
         System.out.println("---ArrayList");
@@ -32,6 +36,7 @@ public class Main {
         //Remove en array
         lista1.remove(1); //quito el elemento de la posición 1 (Sara)
 
+        for (int i=0; i<lista1.size(); i++) {} //
         for (Perro aux:lista1) //foreach
         {
             System.out.println(aux.getName());

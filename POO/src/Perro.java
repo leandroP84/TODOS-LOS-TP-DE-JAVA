@@ -17,6 +17,10 @@ public class Perro extends Lobo
         this.owner = owner;
         this.age = age;
     }
+    //sobrecarga: varios metodos con el mismo nombre, con distinta cantidad de parámetros.
+    //se ejecuta el que coincida en los parametros que le pasamos al llamar al metodo.
+
+
 
     //GETTER Y SETTER
     public String getName () {

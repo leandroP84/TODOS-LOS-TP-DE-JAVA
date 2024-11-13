@@ -32,4 +32,6 @@ public class Pikachu extends Pokemon implements IElectrico {
     public void atacarPunioTrueno() {
         System.out.println("Pikachu, punio trueno!");
     }
+    //@overrride
+    //trae los metodos abstractos de clases abstractas e interfaces, para poder agregarles procedimiento.
 }
