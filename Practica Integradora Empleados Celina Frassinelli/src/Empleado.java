@@ -48,4 +48,8 @@ public class Empleado extends BonoSueldo
         this.bonos = bonos;
     }
 
+    @Override
+    public String toString() {
+        return"Nombre del Empleado: " + nombreEmpleado + " cuil: " + cuil;
+    }
 }

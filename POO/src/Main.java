@@ -1,14 +1,8 @@
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Stack;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.*;
 
 
 public class Main {
-    public static void main1(String[] args)
+    public static void main(String[] args)
     {
         System.out.println("---Pokemon");
         Pikachu pika = new Pikachu();
@@ -24,7 +18,7 @@ public class Main {
 
         //ArrayList de Perros
         System.out.println("---ArrayList");
-        List <Perro> lista1 = new ArrayList<Perro>();
+        List <Perro> lista1 = new ArrayList<Perro>(); //no hace falta definir el tamaño, porque puede cambiar.
         lista1.add(new Perro("Luna", "Messi",5)); //agrego un perro nuevo  la lista
         lista1.add(new Perro("Sara", "Pao",3));
         lista1.add(new Perro("Lara", "Fausti",5));
@@ -41,6 +35,17 @@ public class Main {
         {
             System.out.println(aux.getName());
         }
+
+        //otros metodos
+        // .add(x) añade elemento x
+        // .size() devuelve int numero de elementos
+        // .get(posición)
+        // .remove(posición) Elimina el elementp. Devuelve el elemento eliminado.
+        // .remove(x) Elimina la primera ocurrencia del objeto x. Devuelve true si el elemento estaba en la lista.
+        // .clear()
+        //.set(posición, x) sustituye el elemento de la posicion, por el elemento x. Devuelve el elemento sustituido.
+        // .contains (x) devuelve boolean
+        // .indexOf(x) devuelve la posicion del objeto x. Si no existe, devuelve -1.
 
 
         //LinkedList
@@ -73,8 +78,17 @@ public class Main {
         }
 
         //otros metodos
+        // .addFirst()
+        // .addLast()
+        // .remove()
+        // .removeFirst()
+        // .removeLast()
+        // .size()
         System.out.println("Tamaño de la lista1: " + lista1.size());
         System.out.println("--show last lista2: ");
+        // .getFirst()
+        // .getLast()
+        // .toString()  metodo de la clase trido usando override. devuelve el valor almacenado en el atributo.
         System.out.println(((LinkedList<Perro>) lista2).getFirst().toString());
         System.out.println("Borrar lista1");
         lista1.clear();
@@ -88,7 +102,7 @@ public class Main {
         pila1.push(2);
         pila1.push(3);
 
-        System.out.println(pila1); //Muestra todo el stack, no hace falta instanciar el indice.
+        System.out.println(pila1); //Muestra_todo el stack, no hace falta instanciar el indice.
         pila1.pop(); //elimina el ultimo elemento que se agregó.
         pila1.push(3);
         pila1.push(4);
@@ -96,9 +110,11 @@ public class Main {
         System.out.println("existe el elemento 3? " + pila1.search(3)); //no funciona con objetos
         System.out.println("Ultimo elemento agregado: " + pila1.peek());
 
-        //Map
-        System.out.println("---HashMap"); //cREA EL MAPA
-        Map<Integer,String> mapaEmpleados = new HashMap<>();
+
+
+        //HashMap
+        System.out.println("---HashMap");
+        Map<Integer,String> mapaEmpleados = new HashMap<>(); //cREA EL MAPA
         mapaEmpleados.put(1,"Sr.Salchicha"); //agrega un nuevo valor al mapa
         mapaEmpleados.put(2,"Lara");
         mapaEmpleados.put(3,"Sara");
@@ -109,5 +125,57 @@ public class Main {
         mapaEmpleados.remove(2); //elimina una pareja
         mapaEmpleados.keySet(); //devuelve un conjunto con todas las keys del map
         mapaEmpleados.values(); //devuelve un conjunto con todos los values del map
+
+
+
+        //HashSet
+        //array no ordenado, sin duplicados
+        System.out.println("---HashSet");
+        Set<String> conjuntoHash = new HashSet<String>();
+        conjuntoHash.add("Argentina");
+        conjuntoHash.add("Peru");
+        conjuntoHash.add("Brasil");
+        conjuntoHash.add("Argentina");
+        conjuntoHash.add("Argentina");
+
+        for (String valor : conjuntoHash)
+        {
+            System.out.println("Pais: " + valor);
+        }
+
+        //TreeSet
+        //ordenado, sin duplicados
+        System.out.println("---TreeSet");
+        Set<String> conjuntoTree = new TreeSet <>();
+        conjuntoTree.add("Zoro");
+        conjuntoTree.add("Sanji");
+        conjuntoTree.add("Ace");
+        conjuntoTree.add("Luffy");
+
+        for (String valor : conjuntoTree)
+        {
+            System.out.println(valor);
+        }
+        System.out.println(conjuntoTree.size());
+
+        //LikedHashSet
+        //array de orden FIFO, sin duplicados
+        System.out.println("---LinkedHashSet");
+        Set<Character> conjuntoLinkedHashSet = new LinkedHashSet<>();
+        conjuntoLinkedHashSet.add('g');
+        conjuntoLinkedHashSet.add('z');
+        conjuntoLinkedHashSet.add('c');
+        conjuntoLinkedHashSet.add('l');
+
+        for (Character valor : conjuntoLinkedHashSet)
+        {
+            System.out.println(valor);
+        }
+
+        //otros metodos
+        lista1.size();
+        ((LinkedList<Perro>) lista2).getFirst().toString();
+        lista1.clear();
+        lista1.isEmpty();
     }
 }

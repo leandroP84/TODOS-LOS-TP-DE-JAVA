@@ -28,7 +28,7 @@ public class Main2 {
     private static Scanner scanner = new Scanner(System.in);
 
 
-    public static void main(String[] args)
+    public static void main2(String[] args)
     {
         //Perro salchicha = new Perro("Luna", "Messi", 5); //parametros ordenados
         //salchicha.setColor("marrón");

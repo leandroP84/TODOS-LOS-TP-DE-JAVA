@@ -32,11 +32,15 @@ public class CalculoBonoSueldo {
 
         //2a
         Empleado empleado = new Empleado();
+        //2d
+        BonoSueldo bonoSueldo = new BonoSueldo();
+
 
         //2b
 
         System.out.print("Ingrese el nombre del empleado: ");
         empleado.setNombreEmpleado(sc.nextLine());
+        bonoSueldo.setEmpleado(empleado);
 
         System.out.print("Ingrese el cuil del empleado: ");
         empleado.setCuil(sc.nextLong());
@@ -63,12 +67,16 @@ public class CalculoBonoSueldo {
         empleado.setSueldoBasico(sc.nextInt());
 
 
+
+
         //2c
         int antiguedad = anio -ingreso;
         empleado.setMontoAntiguedad(empleado.getSueldoBasico() * (antiguedad * 0.02));
 
-        //2d
-        BonoSueldo bonoSueldo = new BonoSueldo();
+
+        System.out.println(bonoSueldo.getEmpleado());
+
+
         //2e
         String [][] bonoCalculado = new String[10][4];
 
