@@ -1,6 +1,4 @@
 class Funciones {
-
-
     int numerador;
     int denominador;
 
@@ -10,11 +8,11 @@ class Funciones {
         this.denominador = denominador;
     }
 
-    public Funciones sumarFracciones(Funciones f) {
-        int nuevoNumerador = this.numerador * f.denominador + f.numerador * this.denominador;
-        int nuevoDenominador = this.denominador * f.denominador;
-        return new Fraccion(nuevoNumerador, nuevoDenominador);
-    }
+    //public Funciones sumarFracciones(Funciones f) {
+     //   int nuevoNumerador = this.numerador * f.denominador + f.numerador * this.denominador;
+       // int nuevoDenominador = this.denominador * f.denominador;
+        // new Fraccion(nuevoNumerador, nuevoDenominador);
+    //}
 
     public Funciones restarFracciones(Funciones f) {
         int nuevoNumerador = this.numerador * f.denominador - f.numerador * this.denominador;

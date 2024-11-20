@@ -9,7 +9,8 @@ public class ResumenJAVAparcial
         //scanner - input de datos por teclado
         Scanner sc = new Scanner(System.in);
 
-        int random = (int) (Math.random()*100+1);
+        int random = (int) (Math.random()*101); // 0 to 100
+        int random = (int) (Math.random()*88+10); // 10 to 99
 
         //arrays unidimensionales
         int [] array1 = new int[10];
@@ -23,6 +24,10 @@ public class ResumenJAVAparcial
 
 
         //system in and out
+        System.out.println(); //prints in a new line.
+        System.out.print(); // prints immediately after the last thing.
+
+
         System.out.println("Ingrese un numero: ");
         int num = sc.nextInt();
         System.out.println("Ingrese una palabra: ");
@@ -35,7 +40,8 @@ public class ResumenJAVAparcial
         // suma: +   resta: -   mult: *   div: /    modulo: %
 
 
-        // && AND     || OR
+        //    && AND     || OR
+
         if (num == 1)
         {
             //do x
@@ -100,6 +106,8 @@ public class ResumenJAVAparcial
         palabra1 = palabra1.trim(); //elimina los espacios
 
 
+        //algoritmos de ordenación
+
         //algoritmo de inserción:
         //Toma elementos de a uno y los ordena con respecto al anterior
         for (int i = 0; i < 5; i++)
@@ -119,6 +127,7 @@ public class ResumenJAVAparcial
         boolean intercambio = false;
         do
         {
+            intercambio = false;
             for (int i = 1; i < 5; i++) {
                 //si el par no está ordenado
                 if (lista[i - 1] > lista[i])
@@ -173,9 +182,11 @@ public class ResumenJAVAparcial
         //Se elige un pivote y ordena los elementos en Mayor y menor que el pivote. Rinse and repeat.
 
 
+        //
+        //
+
         //funciones
         saludar();
-
 
     }
 
